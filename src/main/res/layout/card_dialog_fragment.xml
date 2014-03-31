@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/title_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/title_textView"
+        android:layout_marginTop="4dp"
+        android:hint="@string/title"
+        android:inputType="textMultiLine|textCapWords"
+        android:maxLines="3" />
+
+    <EditText
+        android:id="@+id/details_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/title_editText"
+        android:layout_below="@+id/title_editText"
+        android:layout_marginTop="4dp"
+        android:hint="@string/details"
+        android:inputType="textImeMultiLine|textMultiLine|textCapSentences"
+        android:maxLines="3" />
+
+    <TextView
+        android:id="@+id/title_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/title_editText"
+        android:background="@color/actionbar_background"
+        android:gravity="center_horizontal"
+        android:text="@string/new_card"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textSize="32sp" />
+
+    <ImageView
+        android:id="@+id/attachment_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignEnd="@+id/image_detail_checkBox"
+        android:layout_alignLeft="@+id/delete_attachment_imageView"
+        android:layout_alignRight="@+id/image_detail_checkBox"
+        android:layout_alignStart="@+id/delete_attachment_imageView"
+        android:layout_below="@+id/details_editText"
+        android:layout_marginTop="8dp"
+        android:maxHeight="100dp"
+        android:minHeight="50dp"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_menu_gallery" />
+
+    <ImageView
+        android:id="@+id/delete_attachment_imageView"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/attachment_imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/attachment_imageView"
+        android:paddingLeft="5dp"
+        android:src="@android:drawable/ic_delete"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignEnd="@+id/image_detail_checkBox"
+        android:layout_alignRight="@+id/image_detail_checkBox"
+        android:layout_below="@+id/image_detail_checkBox"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="4dip"
+            android:background="?android:attr/dividerVertical" />
+
+        <View
+            android:id="@+id/ViewColorPickerHelper"
+            android:layout_width="1dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="4dip"
+            android:layout_marginTop="4dip"
+            android:background="?android:attr/dividerVertical" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/ViewColorPickerHelper"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawableLeft="@drawable/ic_action_cancel"
+            android:text="@android:string/cancel" />
+
+        <Button
+            android:id="@+id/create_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/ViewColorPickerHelper"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawableRight="@drawable/ic_action_accept"
+            android:text="@string/card_create" />
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/image_detail_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/delete_attachment_imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/delete_attachment_imageView"
+        android:layout_below="@+id/attachment_imageView"
+        android:layout_marginTop="8dp"
+        android:checked="false"
+        android:text="@string/image_part_of_details" />
+
+</RelativeLayout>

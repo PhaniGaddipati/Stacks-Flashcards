@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<org.centum.android.stats.SessionView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/session_relativelayout"
+        android:background="@drawable/card_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:id="@+id/name_textView"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_marginLeft="8dp"
+            android:layout_toLeftOf="@+id/session_empty_textView"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_text"
+            android:id="@+id/date_textView"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/name_textView"
+            android:layout_alignTop="@+id/name_textView"
+            android:layout_marginTop="20dp"
+            android:textColor="#afafaf"
+            android:textStyle="italic"
+            android:layout_toLeftOf="@+id/session_empty_textView" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_imageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_action_overflow_dark"
+            android:layout_alignBottom="@+id/date_textView" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@android:drawable/presence_online"
+            android:layout_alignBottom="@+id/edit_imageView"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty"
+            android:id="@+id/session_empty_textView"
+            android:layout_toLeftOf="@+id/edit_imageView"
+            android:textColor="@android:color/holo_red_light"
+            android:layout_alignTop="@+id/edit_imageView"
+            android:layout_alignBottom="@+id/edit_imageView"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:visibility="visible" />
+    </RelativeLayout>
+</org.centum.android.stats.SessionView>

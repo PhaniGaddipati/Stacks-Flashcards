@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/frag_container"
+    android:animateLayoutChanges="false"
+    android:background="@drawable/drawer_shadow">
+
+    <GridView
+        android:id="@+id/card_list"
+        android:animateLayoutChanges="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:visibility="visible"
+        android:layout_below="@+id/attribution_textview"
+        android:fastScrollEnabled="true"
+        android:fastScrollAlwaysVisible="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/empty_imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/app_icon_gray"
+        android:paddingBottom="150dp"
+        android:paddingLeft="80dp"
+        android:paddingTop="80dp"
+        android:paddingRight="80dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/empty_card_text"
+        android:id="@+id/empty_textView"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:textColor="@android:color/darker_gray"
+        android:textStyle="bold"
+        android:alpha=".5"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quizlet_attribution"
+        android:id="@+id/attribution_textview"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/holo_blue_bright"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:background="@color/actionbar_background" />
+
+</RelativeLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.centum.android.stack"
+    android:versionCode="27"
+    android:versionName="2.01">
+
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity
+            android:name="org.centum.android.MainActivity"
+            android:label="@string/app_name"
+            android:uiOptions="splitActionBarWhenNarrow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+
+        </activity>
+        <activity
+            android:name="org.centum.android.settings.SettingsActivity"
+            android:label="@string/settings"
+            android:parentActivityName="org.centum.android.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.centum.android.MainActivity" />
+        </activity>
+        <activity
+            android:name="org.centum.android.draw.DrawActivity"
+            android:label="@string/draw_title"
+            android:parentActivityName="org.centum.android.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.centum.android.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="org.centum.android.play.PlayActivity"
+            android:label="@string/title_activity_play"
+            android:parentActivityName="org.centum.android.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.centum.android.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="org.centum.android.learn.LearnActivity"
+            android:label="@string/title_activity_learn"
+            android:parentActivityName="org.centum.android.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.centum.android.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="org.centum.android.stats.StatsActivity"
+            android:label="@string/title_activity_stats"
+            android:parentActivityName="org.centum.android.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.centum.android.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="org.centum.android.stack.ArchivedStacksActivity"
+            android:label="@string/archived_stacks"
+            android:parentActivityName="org.centum.android.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.centum.android.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="org.centum.android.card.ArchivedCardsActivity"
+            android:label="@string/archived_stacks"
+            android:parentActivityName="org.centum.android.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.centum.android.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="org.centum.android.stats.SessionActivity"
+            android:label="@string/session_activity"
+            android:parentActivityName="org.centum.android.stats.StatsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.centum.android.stats.StatsActivity" />
+        </activity>
+
+        <activity
+            android:name="org.centum.android.integration.ImportActivity"
+            android:label="@string/session_activity"
+            android:parentActivityName="org.centum.android.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.centum.android.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="org.centum.android.HelpActivity"
+            android:label="@string/help"
+            android:parentActivityName="org.centum.android.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.centum.android.MainActivity" />
+        </activity>
+
+    </application>
+
+</manifest>

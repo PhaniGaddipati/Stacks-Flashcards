@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_select_all_cards"
+        android:icon="@drawable/ic_action_select_all"
+        android:title="@android:string/selectAll"
+        android:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_copy_card"
+        android:icon="@drawable/ic_action_copy"
+        android:title="@android:string/copy"
+        android:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_paste_card"
+        android:icon="@drawable/ic_action_paste"
+        android:title="@android:string/paste"
+        android:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_swap_elements"
+        android:icon="@drawable/ic_swap"
+        android:title="@string/swap_elements"
+        android:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_archive_card"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:title="@string/card_archive"
+        android:showAsAction="ifRoom" />
+
+</menu>

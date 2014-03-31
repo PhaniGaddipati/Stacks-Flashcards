@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_back"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_action_back"
+        android:title="@string/back" />
+    <item
+        android:id="@+id/action_forward"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_action_forward"
+        android:title="@string/back" />
+</menu>

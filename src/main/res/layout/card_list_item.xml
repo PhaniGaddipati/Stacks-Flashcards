@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<org.centum.android.card.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/region_cardview"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:animateLayoutChanges="true"
+    android:paddingRight="16dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/card_bg"
+        android:minHeight="@dimen/card_height">
+
+        <TextView
+            android:id="@+id/title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="39dp"
+            android:layout_marginRight="39dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="@string/title"
+            android:text="Test"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/details_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/title_textView"
+            android:layout_alignLeft="@+id/title_textView"
+            android:layout_alignRight="@+id/title_textView"
+            android:layout_alignStart="@+id/title_textView"
+            android:layout_below="@+id/title_textView"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:minLines="2"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/edit_imageView"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/details_textView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="5dp"
+            android:paddingRight="3dp"
+            android:paddingTop="8dp"
+            android:scaleType="fitStart"
+            android:src="@android:drawable/ic_menu_edit" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/correct_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/card_relativelayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/edit_imageView"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="4dp"
+        android:background="@android:color/holo_orange_dark"
+        android:gravity="center_horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="100% correct"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/thumb_imageView"
+        android:layout_width="@dimen/card_icon_width"
+        android:layout_height="75dp"
+        android:layout_alignBottom="@id/card_relativelayout"
+        android:layout_alignTop="@id/card_relativelayout"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="fitStart" />
+
+</org.centum.android.card.CardView>
