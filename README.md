@@ -1,6 +1,6 @@
 Stacks Flashcards
 =================
-Copyright 2014 Phani Gaddipati (rp181)
+Copyright 2015 Phani Gaddipati (rp181)
 
 The source files for Stacks Flashcards: https://play.google.com/store/apps/details?id=org.centum.android.stack&hl=en
 
