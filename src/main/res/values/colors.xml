@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="actionbar_background">#222222</color>
-    <color name="background_holo_light">#fff3f3f3</color>
-    <color name="holo_green">#99CC00</color>
-    <color name="holo_red">#FF4444</color>
-    <color name="dark_card_bg">#262626</color>
-</resources>
