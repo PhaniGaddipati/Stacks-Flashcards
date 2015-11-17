@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<org.centum.android.presentation.writein.WriteInCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/show_button"
+        android:layout_marginBottom="8dp">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:id="@+id/play_relativelayout"
+            android:layout_alignParentLeft="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/title_textView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:minHeight="50dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/answer_editText"
+                android:minLines="2"
+                android:hint="Type the answer"
+                android:layout_alignRight="@+id/attachment_imageView"
+                android:layout_alignEnd="@+id/attachment_imageView"
+                android:layout_alignLeft="@+id/attachment_imageView"
+                android:layout_alignStart="@+id/attachment_imageView"
+                android:layout_below="@+id/progressBar" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:id="@+id/attachment_imageView"
+                android:layout_alignRight="@+id/title_textView"
+                android:layout_alignEnd="@+id/title_textView"
+                android:layout_below="@+id/title_textView"
+                android:layout_alignLeft="@+id/title_textView"
+                android:layout_alignStart="@+id/title_textView"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/check_button"
+                android:layout_below="@+id/attachment_imageView"
+                android:background="@android:color/holo_orange_light"
+                android:layout_alignLeft="@+id/answer_editText"
+                android:layout_alignStart="@+id/answer_editText"
+                android:layout_alignRight="@+id/answer_editText"
+                android:layout_alignEnd="@+id/answer_editText"
+                android:text="Check Answer" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="4dp"
+                android:id="@+id/progressBar"
+                android:layout_alignLeft="@+id/answer_editText"
+                android:layout_alignStart="@+id/answer_editText"
+                android:layout_alignRight="@+id/answer_editText"
+                android:layout_alignEnd="@+id/answer_editText"
+                android:progressDrawable="@drawable/green_progress_bar"
+                android:layout_below="@+id/check_button"
+                android:layout_marginTop="1dp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/show_button"
+        android:background="@android:color/holo_purple"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/answer_editText"
+        android:layout_alignStart="@+id/answer_editText"
+        android:layout_alignRight="@+id/answer_editText"
+        android:layout_alignEnd="@+id/answer_editText"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Show Answer" />
+</org.centum.android.presentation.writein.WriteInCardView>

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <TextView
+        android:id="@+id/title_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/actionbar_background"
+        android:gravity="center_horizontal"
+        android:paddingBottom="2dp"
+        android:text="@string/test_settings"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/session_name_editText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/title_textView"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:hint="Session Name" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/session_name_editText">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Presets"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/settings"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView4"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
+                android:visibility="visible">
+
+                <CheckBox
+                    android:id="@+id/session_time_limit_checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Test Time Limit"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/stack_min_editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/session_time_limit_checkBox"
+                    android:layout_alignStart="@+id/session_time_limit_checkBox"
+                    android:layout_below="@+id/session_time_limit_checkBox"
+                    android:layout_marginLeft="32dp"
+                    android:hint="Min"
+                    android:inputType="number"
+                    android:text="5"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/stack_colon_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/stack_min_editText"
+                    android:layout_below="@+id/session_time_limit_checkBox"
+                    android:layout_toRightOf="@+id/stack_min_editText"
+                    android:text=":"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/stack_sec_editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/session_time_limit_checkBox"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@+id/stack_min_editText"
+                    android:hint="Seconds"
+                    android:inputType="number"
+                    android:text="0"
+                    android:visibility="visible" />
+
+                <CheckBox
+                    android:id="@+id/card_time_limit_checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stack_min_editText"
+                    android:checked="false"
+                    android:text="Card Time Limit"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/card_min_editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/card_time_limit_checkBox"
+                    android:layout_alignStart="@+id/card_time_limit_checkBox"
+                    android:layout_below="@+id/card_time_limit_checkBox"
+                    android:layout_marginLeft="32dp"
+                    android:hint="Min"
+                    android:inputType="number"
+                    android:text="0"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/card_colon_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/card_min_editText"
+                    android:layout_below="@+id/card_time_limit_checkBox"
+                    android:layout_toRightOf="@+id/card_min_editText"
+                    android:text=":"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/card_sec_editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/card_time_limit_checkBox"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@+id/card_min_editText"
+                    android:hint="Seconds"
+                    android:inputType="number"
+                    android:text="10"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/settings"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Question Types"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/presets"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/untimed_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="Untimed"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/timed_test_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:text="Timed"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/rapid_fire_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="Rapid Fire"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView2"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/simple_checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Simple"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/multi_checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Multi Choice"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/write_checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Write-In"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/presets"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:text="Timing"
+                android:textIsSelectable="false"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/confirm_btns_relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignEnd="@+id/image_detail_checkBox"
+                android:layout_alignRight="@+id/image_detail_checkBox"
+                android:layout_below="@+id/linearLayout"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="4dip"
+                    android:layout_marginRight="4dip"
+                    android:background="?android:attr/dividerVertical" />
+
+                <View
+                    android:id="@+id/ViewColorPickerHelper"
+                    android:layout_width="1dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="4dip"
+                    android:layout_marginTop="4dip"
+                    android:background="?android:attr/dividerVertical" />
+
+                <Button
+                    android:id="@+id/cancel_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@id/ViewColorPickerHelper"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawableLeft="@drawable/ic_action_cancel"
+                    android:text="@android:string/cancel" />
+
+                <Button
+                    android:id="@+id/confirm_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/ViewColorPickerHelper"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawableRight="@drawable/ic_action_accept"
+                    android:text="Confirm" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<org.centum.android.presentation.multiplechoice.ChoiceView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/region_cardview"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:background="@drawable/card_bg"
+    android:minHeight="80dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/attachment_imageView"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:scaleType="fitCenter"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            android:visibility="visible"
+            android:layout_marginRight="4dp"
+            android:src="@drawable/ic_right"
+            android:paddingLeft="8dp"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:paddingRight="8dp"
+            android:layout_alignBottom="@+id/details_textView" />
+
+        <TextView
+            android:id="@+id/details_textView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="12sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="false"
+            android:minHeight="59dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:layout_toRightOf="@+id/textView" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textView"
+            android:background="#e6e6e6"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="6dp"
+            android:layout_alignBottom="@+id/details_textView"
+            android:layout_toRightOf="@+id/attachment_imageView" />
+
+
+    </RelativeLayout>
+
+</org.centum.android.presentation.multiplechoice.ChoiceView>

@@ -1,0 +1,12 @@
+/build
+/src/main/java/org/centum/android/utils/KEYS.java
+
+/.gradle
+/.idea
+/gradle
+/build.gradle
+/phanigad.keystore
+/proguard-rules.txt
+/Stacks.iml
+/.gradle
+/.idea

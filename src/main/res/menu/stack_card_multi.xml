@@ -1,0 +1,125 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="org.centum.android.MainActivity">
+
+    <item
+        android:icon="@drawable/ic_search"
+        android:showAsAction="ifRoom"
+        android:title="@string/search">
+        <menu>
+
+            <item
+                android:id="@+id/action_search_stacks"
+                android:actionViewClass="android.widget.SearchView"
+                android:showAsAction="ifRoom|collapseActionView"
+                android:title="@string/action_search_stacks" />
+            <item
+                android:id="@+id/action_search_cards"
+                android:actionViewClass="android.widget.SearchView"
+                android:showAsAction="ifRoom|collapseActionView"
+                android:title="@string/action_search_cards" />
+        </menu>
+    </item>
+
+    <item
+        android:icon="@drawable/ic_action_add"
+        android:showAsAction="ifRoom"
+        android:title="@string/add">
+        <menu>
+            <item
+                android:id="@+id/action_add_stack"
+                android:showAsAction="ifRoom"
+                android:title="@string/action_add_stack" />
+            <item
+                android:id="@+id/action_add_card"
+                android:showAsAction="ifRoom"
+                android:title="@string/action_add_card" />
+        </menu>
+    </item>
+
+    <item
+        android:icon="@android:drawable/stat_sys_download"
+        android:showAsAction="ifRoom"
+        android:title="@string/import_s">
+        <menu>
+            <item
+                android:id="@+id/action_import_quizlet"
+                android:icon="@drawable/ic_quizlet"
+                android:showAsAction="ifRoom"
+                android:title="@string/import_quizlet" />
+
+            <item
+                android:id="@+id/action_import_studystack"
+                android:icon="@drawable/ic_study_stack"
+                android:showAsAction="ifRoom"
+                android:title="@string/import_studystack" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_show_stats"
+        android:icon="@drawable/ic_stats"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_stats" />
+
+    <item
+        android:id="@+id/action_sort_cards"
+        android:icon="@drawable/ic_action_sort_by_size"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_sort">
+
+        <menu>
+            <item
+                android:id="@+id/action_sort_by_name"
+                android:showAsAction="ifRoom"
+                android:title="@string/action_sort_name" />
+            <item
+                android:id="@+id/action_sort_by_correct"
+                android:showAsAction="ifRoom"
+                android:title="@string/action_sort_correct" />
+            <item
+                android:id="@+id/action_sort_by_wrong"
+                android:showAsAction="ifRoom"
+                android:title="@string/action_sort_wrong" />
+            <item
+                android:id="@+id/action_shuffle_cards"
+                android:showAsAction="ifRoom"
+                android:title="@string/action_shuffle" />
+        </menu>
+
+    </item>
+
+    <item
+        android:icon="@drawable/ic_action_undo"
+        android:showAsAction="ifRoom"
+        android:title="@string/archive">
+
+        <item
+            android:id="@+id/action_show_archived_stacks"
+            android:showAsAction="never"
+            android:title="@string/archived_stacks" />
+
+        <item
+            android:id="@+id/action_show_archived_cards"
+            android:showAsAction="ifRoom"
+            android:title="@string/archived_cards" />
+    </item>
+
+    <item
+        android:id="@+id/action_paste_card"
+        android:icon="@drawable/ic_action_paste"
+        android:showAsAction="never"
+        android:title="@android:string/paste" />
+
+    <item
+        android:id="@+id/action_show_settings"
+        android:orderInCategory="-1000"
+        android:showAsAction="never"
+        android:title="@string/settings" />
+
+    <item
+        android:id="@+id/action_show_help"
+        android:orderInCategory="-1500"
+        android:showAsAction="never"
+        android:title="@string/help" />
+</menu>

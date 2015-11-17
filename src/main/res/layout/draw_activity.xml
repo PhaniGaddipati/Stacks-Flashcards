@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bar_imageView"
+        android:layout_below="@+id/controls_relativeLayout">
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/controls_relativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/actionbar_background"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/undo_imageView"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/minusstroke_imageView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/minusstroke_imageView"
+            android:layout_marginLeft="5dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="4dp"
+            android:src="@drawable/ic_action_undo" />
+
+        <ImageView
+            android:id="@+id/stroke_imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:scaleType="center"
+            android:src="@android:drawable/presence_online" />
+
+        <ImageView
+            android:id="@+id/addstroke_imageview"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/stroke_imageView"
+            android:layout_alignTop="@+id/stroke_imageView"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/stroke_imageView"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_action_add" />
+
+        <ImageView
+            android:id="@+id/minusstroke_imageView"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/stroke_imageView"
+            android:layout_alignTop="@+id/stroke_imageView"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@+id/stroke_imageView"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_action_minus" />
+
+        <ImageView
+            android:id="@+id/redo_imageView"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/undo_imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/undo_imageView"
+            android:layout_marginRight="5dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="4dp"
+            android:src="@drawable/ic_action_redo" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/bar_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/relativeLayout"
+        android:background="@color/actionbar_background" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/actionbar_background">
+
+        <ImageView
+            android:id="@+id/erase_imageView"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/bg_textView"
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:src="@drawable/ic_erase" />
+
+        <ImageView
+            android:id="@+id/customColor_imageView"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_color" />
+
+        <TextView
+            android:id="@+id/bg_textView"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="BG"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:id="@+id/color_scrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/customColor_imageView"
+            android:layout_toRightOf="@+id/erase_imageView"
+            android:background="@color/actionbar_background">
+
+        <LinearLayout
+                android:id="@+id/colors_linearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:minHeight="50dp"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

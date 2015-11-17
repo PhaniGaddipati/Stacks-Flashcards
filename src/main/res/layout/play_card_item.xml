@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<org.centum.android.presentation.play.PlayCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
+    <ImageButton
+        android:id="@+id/correct_imageButton"
+        android:layout_width="53dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/wrong_imageButton"
+        android:alpha=".25"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/correct_light" />
+
+    <ImageButton
+        android:id="@+id/wrong_imageButton"
+        android:layout_width="53dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:alpha=".25"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/wrong_light" />
+
+    <TextView
+        android:id="@+id/title_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="38dp"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title_textView"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_toEndOf="@+id/wrong_imageButton"
+        android:layout_toLeftOf="@+id/correct_imageButton"
+        android:layout_toRightOf="@+id/wrong_imageButton"
+        android:layout_toStartOf="@+id/correct_imageButton"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/play_relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:id="@+id/details_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:alpha="0.0"
+                android:gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="22sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/details_textView"
+                android:layout_marginTop="16dp"
+                android:scaleType="fitCenter"
+                android:visibility="visible" />
+
+            <Space
+                android:id="@+id/space"
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="40dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</org.centum.android.presentation.play.PlayCardView>

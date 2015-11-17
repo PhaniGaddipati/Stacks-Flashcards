@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<org.centum.android.integration.GenericSetView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/set_name_textView"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_horizontal"
+            android:hint="@string/name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="8dp"
+            android:text="Test Title Set Of Quizlet"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/set_description_textView"
+            android:textSize="12sp"
+            android:textColor="#0d4945"
+            android:textStyle="italic"
+            android:gravity="center_horizontal|top"
+            android:layout_alignLeft="@+id/set_name_textView"
+            android:layout_below="@+id/set_name_textView"
+            android:text="Countries of the world"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toLeftOf="@+id/set_numCards_textView"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/zero_parens"
+            android:id="@+id/set_numCards_textView"
+            android:textColor="#a8a8a8"
+            android:textStyle="italic"
+            android:layout_below="@+id/set_name_textView"
+            android:layout_alignRight="@+id/set_name_textView"
+            android:layout_alignEnd="@+id/set_name_textView"
+            android:layout_alignBottom="@+id/set_description_textView" />
+
+
+    </RelativeLayout>
+
+</org.centum.android.integration.GenericSetView>

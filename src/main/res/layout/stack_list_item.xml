@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.centum.android.stack.StackView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/region_stackview"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/stack_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="8dp"
+        android:minHeight="@dimen/stack_height">
+
+        <ImageView
+            android:id="@+id/stack_icon_imageView"
+            android:layout_width="@dimen/stack_icon_width"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/stack_description_textView"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/stack_name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="0dp"
+            android:layout_toLeftOf="@+id/stack_edit_imageView"
+            android:layout_toRightOf="@+id/stack_icon_imageView"
+            android:gravity="bottom|left"
+            android:hint="@string/name"
+            android:minHeight="45dp"
+            android:paddingBottom="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/stack_description_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/stack_name_textView"
+            android:layout_below="@+id/stack_name_textView"
+            android:layout_marginBottom="8dp"
+            android:layout_toLeftOf="@+id/stack_numCards_textView"
+            android:layout_toStartOf="@+id/stack_numCards_textView"
+            android:gravity="left|top"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#0d4945"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/stack_numCards_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/stack_description_textView"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/stack_description_textView"
+            android:layout_marginRight="8dp"
+            android:minWidth="24dp"
+            android:text="@string/zero_parens"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#a8a8a8"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/stack_edit_imageView"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="0dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:scaleType="fitStart"
+            android:src="@android:drawable/ic_menu_edit" />
+
+        <ImageView
+            android:id="@+id/bar_imageView"
+            android:layout_width="5dp"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@id/stack_numCards_textView"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="-14dp"
+            android:background="@android:color/holo_red_dark" />
+
+    </RelativeLayout>
+
+</org.centum.android.stack.StackView>
